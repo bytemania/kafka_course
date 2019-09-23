@@ -9,7 +9,9 @@ import com.twitter.hbc.core.endpoint.StatusesFilterEndpoint;
 import com.twitter.hbc.core.processor.StringDelimitedProcessor;
 import com.twitter.hbc.httpclient.auth.Authentication;
 import com.twitter.hbc.httpclient.auth.OAuth1;
-import org.apache.kafka.clients.producer.*;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,10 +25,10 @@ import java.util.concurrent.TimeUnit;
 public class TwitterProducer {
 
     private Logger logger = LoggerFactory.getLogger(TwitterProducer.class.getName());
-    private static final String CONSUMER_KEY = "FQrRgp0Hk8VNz2osOJsRC11KT";
-    private static final String CONSUMER_SECRET = "2Vx2nXJcYrluHCYv6Uk8cJfM8BQwrj2vJVCrqm9CuO5o4ivrr6";
-    private static final String TOKEN = "880782448828833792-T4FNmkLjy40kGlbdUCJRCg8atAi3m5m";
-    private static final String SECRET = "uDLymgLEgga1I44bL1LdaNIf5jrHFIpwzOxTzygKQE4au";
+    private static final String CONSUMER_KEY = "";
+    private static final String CONSUMER_SECRET = "";
+    private static final String TOKEN = "";
+    private static final String SECRET = "";
     private static final List<String> TERMS = List.of("bitcoin", "usa", "politics", "sport", "soccer");
 
     private TwitterProducer() {
